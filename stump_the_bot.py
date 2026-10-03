@@ -163,7 +163,7 @@ if pass_q and not st.session_state.pass_used:
     if len(st.session_state.categories_left) == 0:
         st.session_state.game_over = True
 
-    st.experimental_rerun()
+    st.rerun()
 
 # -----------------------------
 # SUBMIT ANSWER LOGIC
@@ -192,7 +192,7 @@ if submit and player_answer.strip() != "":
     # Check strikes
     if st.session_state.strikes >= 3:
         st.session_state.game_over = True
-        st.experimental_rerun()
+        st.rerun()
 
     # Move to next question
     st.session_state.current_question_index += 1
@@ -204,7 +204,7 @@ if submit and player_answer.strip() != "":
     if len(st.session_state.categories_left) == 0:
         st.session_state.game_over = True
 
-    st.experimental_rerun()
+    st.rerun()
 
 # -----------------------------
 # SCOREBOARD
